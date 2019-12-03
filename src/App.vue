@@ -1,17 +1,18 @@
 <template>
   <div class="small">
-    <line-chart :chart-data="datacollection" id="mychart"></line-chart>
+    <Table></Table>
   </div>
 </template>
     
 <script>
-import LineChart from "../LineChart.js";
+//import LineChart from "../LineChart.js";
+import Table from "./components/Table"
 import io from "socket.io-client";
 var socket = io.connect("http://localhost:4000");
     
 export default {
   components: {
-    LineChart
+    Table
   },
   data() {
     return {
